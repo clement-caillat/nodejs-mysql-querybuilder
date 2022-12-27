@@ -89,6 +89,13 @@ db.select('username, password').where('id', 12).and('mail', 'test@test.com').exe
 let res = db.fetchAll();
 ```
 
+### Or
+```js
+db.setTable('users');
+db.select().where('id', 12).or('mail', 'test@test.com').execute();
+let res = db.fetchAll();
+```
+
 ## Join
 ```js
 db.setTable('users');
